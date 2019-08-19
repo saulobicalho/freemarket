@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load static %}
+        <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <title>{% block head_title %} CFE {% endblock %}</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+          <div class='col-6 mx-auto'>
+              <h1>{% block title %} CFE {% endblock %}</h1>
+          </div>
+      </div>
+      <ul>
+          <li><a href="{% url 'website:index' %}">Página Inicial</a></li>
+          <li><a href="{% url 'website:cadastra_produto' %}">Cadastrar Produto</a></li>
+          <li><a href="{% url 'website:lista_produtos' %}">Lista de Produtos</a></li>
+      </ul>
+  </div>
+
+  </body>
+</html>
