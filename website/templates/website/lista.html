@@ -5,12 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>Lista de Funcionários</h1>
+    <h1>Lista de Produtos</h1>
 
     <ul>
         <li><a href="{% url 'website:index' %}">Página Inicial</a></li>
-        <li><a href="{% url 'website:cadastra_funcionario' %}">Cadastrar Funcionário</a></li>
-        <li><a href="{% url 'website:lista_funcionarios' %}">Lista de Funcionários</a></li>
+        <li><a href="{% url 'website:cadastra_produto' %}">Cadastrar Produto</a></li>
+        <li><a href="{% url 'website:lista_produtos' %}">Lista de Produtos</a></li>
     </ul>
 
     <div style="max-width: 50%;">
@@ -26,14 +26,14 @@
             </thead>
 
             <tbody>
-                {% for funcionario in funcionarios %}
+                {% for produto in produtos %}
                     <tr>
-                        <td>{{ funcionario.nome }} {{ funcionario.sobrenome }}</td>
-                        <td>{{ funcionario.cpf }}</td>
-                        <td>{{ funcionario.remuneracao }}</td>
-                        <td>{{ funcionario.tempo_de_servico }}</td>
-                        <td><a href="{% url 'website:atualiza_funcionario' pk=funcionario.id %}">Atualizar</a></td>
-                        <td><a href="{% url 'website:deleta_funcionario' pk=funcionario.id %}">Excluir</a></td>
+                        <td>{{ produto.nome }} {{ produto.sobrenome }}</td>
+                        <td>{{ produto.cpf }}</td>
+                        <td>{{ produto.remuneracao }}</td>
+                        <td>{{ produto.tempo_de_servico }}</td>
+                        <td><a href="{% url 'website:atualiza_produto' pk=produto.id %}">Atualizar</a></td>
+                        <td><a href="{% url 'website:deleta_produto' pk=produto.id %}">Excluir</a></td>
                     </tr>
                 {% endfor %}
             </tbody>
