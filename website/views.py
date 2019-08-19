@@ -29,7 +29,6 @@ class ProdutoCreateView(CreateView):
     form_class = InsereProdutoForm
     success_url = reverse_lazy("website:lista_produtos")
 
-
 # ATUALIZAÇÃO DE FUNCIONÁRIOS
 # ----------------------------------------------
 
